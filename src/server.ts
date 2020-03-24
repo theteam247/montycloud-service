@@ -1,17 +1,15 @@
-import App from './app'
+import App from "./app";
 
-import * as bodyParser from 'body-parser'
+import * as bodyParser from "body-parser";
 
 const app = new App({
   port: 3000,
   middlewares: [
     bodyParser.json(),
     bodyParser.urlencoded({ extended: true }),
-    `middlewares/*`
+    "middlewares/*",
   ],
-  routes: [
-    `routes/*`
-  ],
-})
+  routes: ["routes/*"],
+});
 
-app.listen()
+app.listen();
